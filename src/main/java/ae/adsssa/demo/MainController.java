@@ -27,7 +27,7 @@ public class MainController {
 		return json;
 	}
 
-	@RequestMapping("/indexes")
+	@RequestMapping("")
 	public ModelAndView indexPage() {
 		ModelAndView mv = new ModelAndView("demo");
 		return mv;

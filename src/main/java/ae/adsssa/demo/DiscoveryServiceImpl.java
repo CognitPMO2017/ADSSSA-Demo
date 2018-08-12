@@ -63,7 +63,7 @@ public class DiscoveryServiceImpl {
 			initDB();
 		}
 
-		QueryOptions queryOption = discoveryBuilderDB.naturalLanguageQuery(query).build();
+		QueryOptions queryOption = discoveryBuilderDB.query(query).build();
 		QueryResponse queryResponse = discoveryDB.query(queryOption).execute();
 		List<QueryResult> queryResult = queryResponse.getResults();
 
@@ -87,7 +87,7 @@ public class DiscoveryServiceImpl {
 			initTweets();
 		}
 
-		QueryOptions queryOption = discoveryBuilderTweets.naturalLanguageQuery(query).build();
+		QueryOptions queryOption = discoveryBuilderTweets.query(query).build();
 		QueryResponse queryResponse = discoveryTweets.query(queryOption).execute();
 		List<QueryResult> queryResult = queryResponse.getResults();
 
